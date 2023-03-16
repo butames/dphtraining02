@@ -1,9 +1,9 @@
 # Getting Started - Systematic Review
-<br>
+
 Comprehensive Medication Management and Hypertension
-<br>
+
 Seyram A. Butame
-<br>
+
 March 14, 2023
 
 ---
@@ -17,6 +17,7 @@ March 14, 2023
 - Next session
   - Training on SysRev
   - Establishing concordance
+
 ---
 
 # Review of Protocol
@@ -38,7 +39,14 @@ March 14, 2023
 -   Evolving health care methods
 -   Several policy drivers
 
-![](images/training_cmmtime.svg){width=45%}
+<figure>
+  <p align="center">
+    <img src="{{site.url}}/images/training_cmmtime.svg" alt="CMM steps/stages" width="45%"/>
+    <figcaption> The fours phases/steps of CMM.</figcaption>
+  </p>
+</figure>
+
+
 
 -   Increasing costs of health care
 -   An environment supporting **collaborative drug therapy models (CDTM)**
@@ -48,4 +56,9 @@ March 14, 2023
 
 # Thank you!
 
-![](images/training_iconthanks.svg){fig-align="center" width=25%}
+<figure>
+  <p align="center">
+    <img src="{{site.url}}/images/training_iconthanks.svg" alt="Thank you!" width="25%"/>
+  </p>
+</figure>
+
