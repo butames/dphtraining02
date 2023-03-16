@@ -1,3 +1,4 @@
+
 ## Meeting Agenda
 
 - Brief round of introductions
@@ -7,10 +8,10 @@
 - Next session
   - Training on SysRev
   - Establishing concordance
-
+---
 
 # Review of Protocol
-
+---
 
 ## Introduction
 
@@ -19,6 +20,8 @@
   - Broader Chronic Disease Prevention and Management Strategy (CDPMS)
 - We want effective, innovative interventions
 - Comprehensive Medication Management fits the bill.
+- 
+---
 
 ## Comprehensive Medication Management
 
@@ -30,6 +33,8 @@
 -   Increasing costs of health care
 -   An environment supporting **collaborative drug therapy models (CDTM)**
 -   Leading to Medication Therapy Management (MTM)
+
+---
 
 ## CMM Continued
 
@@ -53,7 +58,7 @@ But CMM is different
 
 :::
 ::::
-
+---
 
 ## Why Chronic Diseases (e.g., Hypertension)?
 
@@ -62,7 +67,7 @@ But CMM is different
 - Hypertension is a starting point
   -   A risk factor for other diseases (e.g., heart disease, diabetes)
   -   A significant issue on its own.
-
+---
 ## Why a Systematic Review?
 
 -   There is increasing uptake of CMM interventions.
