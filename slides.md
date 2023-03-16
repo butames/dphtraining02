@@ -58,7 +58,7 @@ March 14, 2023
 
 <figure>
   <p align="center">
-    <img src="{{site.url}}images/training_iconthanks.svg" alt="Thank you!" width="25%"/>
+    <img src="images/training_iconthanks.svg" alt="Thank you!" width="25%"/>
   </p>
 </figure>
 
