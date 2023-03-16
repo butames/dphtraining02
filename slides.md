@@ -1,214 +1,248 @@
-# A deep dive into Docker
+## Meeting Agenda
 
----
+- Brief round of introductions
+- Review of the protocol
+- Review of project timeline
+- Questions regarding project
+- Next session
+  - Training on SysRev
+  - Establishing concordance
 
-## Andrew Pruski
 
-### SQL Server DBA, Microsoft Data Platform MVP, & Certified Kubernetes Administrator
-<!-- .slide: style="text-align: left;"> -->
-<i class="fab fa-twitter"></i><a href="https://twitter.com/dbafromthecold">  @dbafromthecold</a><br>
-<i class="fas fa-envelope"></i>  dbafromthecold@gmail.com<br>
-<i class="fab fa-wordpress"></i>  www.dbafromthecold.com<br>
-<i class="fab fa-github"></i><a href="https://github.com/dbafromthecold">  github.com/dbafromthecold</a>
+# Review of Protocol
 
----
 
-## Session Aim
-<!-- .slide: style="text-align: left;"> -->
-To provide a deeper knowledge of the Docker platform
+## Introduction
 
----
+- Division of Chronic Disease and Injury Prevention
+  - Efforts to improve overall health of adults in the County
+  - Broader Chronic Disease Prevention and Management Strategy (CDPMS)
+- We want effective, innovative interventions
+- Comprehensive Medication Management fits the bill.
 
-## Agenda
-<!-- .slide: style="text-align: left;"> -->
-- Isolation<br>
-- Networking<br>
-- Persisting data<br>
-- Custom images<br>
-- Docker Compose<br>
+## Comprehensive Medication Management
 
----
+-   Evolving health care methods
+-   Several policy drivers
 
-# Isolation
+![](images/training_cmmtime.svg){width=45%}
 
----
+-   Increasing costs of health care
+-   An environment supporting **collaborative drug therapy models (CDTM)**
+-   Leading to Medication Therapy Management (MTM)
 
-## Container Isolation
-<!-- .slide: style="text-align: left;"> -->
-"Containers isolate software from its environment and ensure that it works uniformly despite differences for instance between development and staging"<br>
-<font size="6"><a href="https://www.docker.com/resources/what-container">docker.com/resources/what-container</a></font>
+## CMM Continued
 
----
+:::: {.columns}
 
-## Control Groups
-<!-- .slide: style="text-align: left;"> -->
-Ensures a single container cannot consume all<br>
-resources of the host<br>
-<br>
-Implements resource limiting of:-
-- CPU
-- Memory
+::: {.column width="50%"}
 
----
+MTM strives to ensure
 
-## Namespaces
-<!-- .slide: style="text-align: left;"> -->
-Control what a container can see<br>
-<br>
-Used to control:-<br>
-- Hostname within the container
-- Processes that the container can see
-- Mapping users in the container to users on the host
+> patients receive best medication therapy to achive pharmacotherapeutic goals
 
----
+- Medicare Part D environment
 
-## File system
-<!-- .slide: style="text-align: left;"> -->
-- Containers cannot see the entire host's filesystem<br>
-- They can only see a subset of that filesystem<br>
-- The container root directory is changed
+::: 
 
----
+::: {.column width="50%"}
 
-# Demo
+But CMM is different
 
----
+![](images/training_cmmproc.svg)
 
-# Networking
+:::
+::::
 
----
 
-## Default networks
-<!-- .slide: style="text-align: left;"> -->
-<img src="images/docker_default_networks.png" style="float: right"/>
+## Why Chronic Diseases (e.g., Hypertension)?
 
-- bridge<br>
-- host<br>
-- none<br>
+- Chronic diseases impact significant portions of the population
+- High economic and social burdens
+- Hypertension is a starting point
+  -   A risk factor for other diseases (e.g., heart disease, diabetes)
+  -   A significant issue on its own.
 
----
+## Why a Systematic Review?
 
-## Bridge network
-<!-- .slide: style="text-align: left;"> -->
-- Default network<br>
-- Represents _docker0_ network<br>
-- Containers communicate by IP address<br>
-- Supports port mapping 
+-   There is increasing uptake of CMM interventions.
+-   The novelty means there are discrepancies in implementation and results
+-   A systematic review helps to
 
----
+> identify, evaluate, and summarize
 
-## User defined networks
-<!-- .slide: style="text-align: left;"> -->
-- Docker provide multiple drivers<br>
-- DNS resolution of container names to IP addresses<br>
-- Can be connected to more than one network<br>
-- Connect/disconnect from networks without restarting<br>
+existing information.
 
----
+## Systematic review purpose
 
-# Demo
+:::: {.columns}
 
----
+::: {.column width="50%"}
 
-# Persisting data
+### Review Aim
 
----
+We are aiming to investigate the effects of pharmacist-led CMM interventions on health related and economic outcomes in the United States.
 
-## Options for persisting data
-<!-- .slide: style="text-align: left;"> -->
-- Bind mounts<br>
-- Data volume containers<br>
-- Named volumes
+:::
 
----
+::: {.column width="50%"}
 
-# Demo
+- Populations with high blood pressure or hypertension
+- Delivery context (i.e., any health care environment)
+  - Ambulatory/ inpatient/ community
+  - Providers in different settings
 
----
+:::
+::::
 
-# Custom images
 
----
+## Steps in a Systematic Review
 
-## Building your own image
-<!-- .slide: style="text-align: left;"> -->
-- Custom images built from a file<br>
-- Known as a dockerfile<br>
-- Customise the image to grant permissions<br>
-- Add databases to SQL Server<br>
+There are several steps:
 
----
+1.   Question formulation
+2.   Protocol development (remains ongoing until the end)
+3.   Database searching (Active)
+4.   Data extraction
+5.   Appraisal
+6.   Data synthesis
+7.   Reporting (peer reviews/ official reports)
 
-## Dockerfile
+## Databases and Search Strategy
 
-<pre><code data-line-numbers="1|3|5-8|10|12|14">FROM mcr.microsoft.com/mssql/server:2019-CU5-ubuntu-18.04
 
-USER root
+:::: {.columns}
 
-RUN mkdir /var/opt/sqlserver
-RUN mkdir /var/opt/sqlserver/sqldata
-RUN mkdir /var/opt/sqlserver/sqllog
-RUN mkdir /var/opt/sqlserver/sqlbackups
+::: {.column width="35%"}
+### Databases
 
-RUN chown -R mssql /var/opt/sqlserver
+- MEDLINE
+- CINAHL
+- Cochrane Library
+- EMBASE
 
-USER mssql
+:::
 
-CMD /opt/mssql/bin/sqlservr
-</pre></code>
+::: {.column width="65%"}
+### Example of Strategy
 
----
+![](images/training_search.png){align="center" width=850%}
 
-# Demo
+- MEDLINE (via PubMed) produced $\approx$ 120 citations
+- With other databases and after de-duplication
+  - Between 150-200 citations
 
----
+:::
 
-# Docker Compose
+::::
 
----
+## Project Tools
 
-## Docker container run
+- Reference management software
+  - Tracking citations and removing duplicates.
 
-<pre><code data-line-numbers="1|2|3-8|9|10-13|14|15">docker container run -d
---publish 15789:1433
---env SA_PASSWORD=Testing1122
---env ACCEPT_EULA=Y
---env MSSQL_AGENT_ENABLED=True
---env MSSQL_DATA_DIR=/var/opt/sqlserver/sqldata
---env MSSQL_LOG_DIR=/var/opt/sqlserver/sqllog
---env MSSQL_BACKUP_DIR=/var/opt/sqlserver/sqlbackups
---network sqlserver
---volume sqlsystem:/var/opt/mssql
---volume sqldata:/var/opt/sqlserver/sqldata
---volume sqllog:/var/opt/sqlserver/sqllog
---volume sqlbackup:/var/opt/sqlserver/sqlbackups
---name sqlcontainer1
-mcr.microsoft.com/mssql/server:2019-CU5-ubuntu-18.04
-</pre></code>
+![Zotero](images/zotero_logo.png){width="15%"}
 
----
+- Data extraction and cataloging software
+  -   screening citations, full-text and data extraction.
 
-## What is Compose?
-<!-- .slide: style="text-align: left;"> -->
-"Compose is a tool for defining and running multi-container Docker applications.
-With Compose, you use a YAML file to configure your application`s services.
-Then, with a single command, you create and start all the services from your configuration."<br>
-<font size="6"><a href="https://docs.docker.com/compose/">docs.docker.com/compose</a></font>
+![SysRev Platform](images/SysRev_logo.png){width="15%"}
 
----
+## What We Will Do
+:::: {.columns}
 
-# Demo
+::: {.column width="50%"}
 
----
+### Project State
 
-## Resources
-<!-- .slide: style="text-align: left;"> -->
-<font size="6">
-<a href="https://github.com/dbafromthecold/DockerDeepDive">https://github.com/dbafromthecold/DockerDeepDive</a><br>
-<a href="http://tinyurl.com/y3x29t3j/summary-of-my-container-series">http://tinyurl.com/y3x29t3j/summary-of-my-container-series</a><br>
-<a href="https://github.com/dbafromthecold/SqlServerAndContainersGuide">https://github.com/dbafromthecold/SqlServerAndContainersGuide</a>
-</font>
+- Protocol is complete
+- Review is registered
+- Search strategy finalized
+- Pulling citations/references
 
-<p align="center">
-<img src="images/dockerdeepdive_qr_code.png" />
-</p>
+:::
+
+::: {.column width="50%"}
+
+### You as a Collaborator
+
+-   Screening Title/Abstract
+-   Screening Full-text
+-   Data extraction (later in the summer)
+
+:::
+::::
+
+## What does it mean to screen?
+
+- Trawling the databases produces numerous citations/references
+  - Too much information to try and extract data.
+- Narrow down to the relevant material (or close to it.)
+- Screening is done using a list of criteria.
+  - We include or exclude citations based on these criteria.
+
+## Project Notes and Information
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+### Project website
+
+![](images/training_website.png){fig-align="center" width=75%}
+
+Contains all relevant project information.
+
+<center>
+<a href="https://butames.github.io/dphcmmsr">Project Website^[<b><https://butames.github.io/dphcmmsr></b>]</a>
+</center>
+
+
+:::
+
+::: {.column width="50%"}
+
+### What you will find
+
+- Protocol Documents
+  - Project rationale
+  - Search strategies
+- Training Materials
+  - Presentations
+  - Platform tutorials
+
+:::
+::::
+
+# Any Questions?
+
+![](images/training_iconques.svg){fig-align="center" width=25%}
+
+## Project Timeline
+
+![](images/training_timeline.svg){fig-align="center"}
+
+- Title/Abstract screening will complete in early April
+- Rest of April for Full-text screening
+
+## In Prepartion for Next Week
+
+- Go through the protocol documents via [project website](https://butames.github.io/dphcmmsr)
+  - Focus on the section on inclusion criteria
+- Shoot me an email if you have questions (sbutame@ph.lacounty.gov)
+
+## Next Week Training
+
+- Discuss finer details of the protocol (i.e., Inclusion criteria)
+-	Walk through of the SysRev Platform
+  -   An introduction to screening titles/ abstracts.
+-	Jump in and do some screening
+
+## After Tranining
+- Collectively screen 10% of the corpus
+-	Assess concordance (I will explain further next week)
+- Then we begin officially!
+
+# Thank you!
+
+![](images/training_iconthanks.svg){fig-align="center" width=25%}
