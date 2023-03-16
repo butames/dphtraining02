@@ -32,7 +32,7 @@ March 14, 2023
 - We want effective, innovative interventions
 - Comprehensive Medication Management fits the bill.
 
-<img src="/images/training_cmmtime.svg" width="25%">
+<img src="images/training_cmmtime.svg" width="25%">
 
 ---
 
@@ -43,7 +43,7 @@ March 14, 2023
 
 <figure>
   <p align="center">
-    <img src="/images/training_cmmtime.svg" alt="CMM steps/stages" width="45%"/>
+    <img src="images/training_cmmtime.svg" alt="CMM steps/stages" width="45%"/>
     <figcaption> The fours phases/steps of CMM.</figcaption>
   </p>
 </figure>
@@ -58,7 +58,7 @@ March 14, 2023
 
 <figure>
   <p align="center">
-    <img src="{{site.url}}/images/training_iconthanks.svg" alt="Thank you!" width="25%"/>
+    <img src="{{site.url}}images/training_iconthanks.svg" alt="Thank you!" width="25%"/>
   </p>
 </figure>
 
