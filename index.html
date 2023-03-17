@@ -16,24 +16,176 @@
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+		<!-- Printing and PDF exports -->
+<script>
+	var link = document.createElement( 'link' );
+	link.rel = 'stylesheet';
+	link.type = 'text/css';
+	link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+	document.getElementsByTagName( 'head' )[0].appendChild( link );
+</script>
+
 	</head>
 	<body>
 		<div class="reveal">
+
+			<!-- Selection elements inside this "reveal" container are showns as slides -->
+
 			<div class="slides">
-				<!-- Title Slide -->
+				<!-- Slide #1 - Title Slide -->
 				<section>
-					<h1>Systematic Review - Document Screening and Other Steps</h1>
+					<h2>Systematic Review - Document Screening and Other Steps</h2>
 					<p>
 						<small>Seyram A. Butame</small>
-						<p>
-							<smaller> DPH, Division of Chronic Disease and Injury Prevention</smaller>
-						</p>
+						<br>
+						<small> DPH, Division of Chronic Disease and Injury Prevention</small>
 					</p>
+					<p>
+						<img src="img/dph_logo.png" width="25%">
+					</p>
+
 				</section>
 
-				<!-- Agenda Slide -->
+				<!-- Slide #2 - Agenda Slide -->
+				<section>
+					<h3>Agenda</h3>
+					<p class="fragment">
+						<ul>
+							<li>Systematic review stage</li>
+							<li>Inclusion criteria</li>
+							<li>Using SysRev Platform</li>
+							<li>Concordance or agreement</li>
+							<li>Questions</li>
+						</ul>
+					</p>
+					<aside class="notes">
+						During today's meeeting we will discuss the following items.
+					</aside>
+				</section>
 
-				<section>Slide 2</section>
+				<!-- Slide #3 - Stage of Systematic Review -->
+
+				<section>
+
+					<h3> Project Stage</h3>
+					
+
+				</section>
+
+				<!-- Slide #4 - Include/ Exclude -->
+
+				<section>
+
+					<h3>To Include or to Exclude</h3>
+
+				</section>
+
+				<!-- Slide #5 - Inclusion Criteria -->
+
+				<section>
+
+					<h3>What are the Inclusion Criteria?</h3>
+
+				</section>
+
+				<!-- Slide #6 -  CMM Intervention-->
+
+				<section>
+					<h3>CMM Intervention</h3>
+				</section>
+
+				<!-- Slide #7 -  Population-->
+
+				<section>
+
+					<h3>Patient [or Provider] Population</h3>
+
+				</section>
+
+				<!-- Slide #8 - Study Outcomes -->
+
+				<section>
+
+				</section>
+
+				<!-- Slide #9 - Study Types -->
+
+				<section>
+
+					<h3>Study Types</h3>
+
+				</section>
+
+				<!-- Slide #9a - Experimental Studies-->
+
+				<section>
+					<section>
+						<h3>Experimental Studies</h3>
+
+						<p class="fragment">
+							<ul>
+								<li>Clinical Trials</li>
+								<li>Community Trials</li>
+							</ul>
+						</p>
+				<!-- Slide #9b - Observational Studies-->
+					</section>
+					<section>
+						<h3>Observational Studies</h3>
+
+						<p class="fragment">
+							<ul>
+								<li>Cohort Studies</li>
+								<li>Case Control Studies</li>
+								<li>Cross-sectional Studies</li>
+							</ul>
+						</p>
+
+					</section>
+				  </section>
+
+				<!-- Slide #10 - Other Criteria-->
+
+				<section>
+
+					<h3>Other Criteria</h3>
+
+					<p class="fragment">
+						<ul>
+							<li>Study Language English </li>
+							<li>Study Country</li>
+							<li>Publication Year</li>
+						</ul>
+					</p>
+
+				</section>
+
+
+				<!-- Slide # - Next Steps -->
+				<section>
+					<h3>Next Steps</h3>
+
+					<p class="fragment">
+						<ul>
+							<li>Study Language English </li>
+							<li>Study Country</li>
+							<li>Publication Year</li>
+						</ul>
+					</p>
+
+				</section>
+
+				<!-- Slide # - Final/Last Slide -->
+				<section>
+					<h2>Thank you!</h2>
+
+					<p>
+						<img src="img/training_iconthanks.svg" width="25%">
+					</p>
+
+				</section>
+
 
 			</div>
 		</div>
@@ -57,10 +209,12 @@
 				slideNumber: true,
 				progress: true,
 				help: true,
+				transition: 'convex', // none/fade/slide/convex/concave/zoom
 
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
 		</script>
+
 	</body>
 </html>
