@@ -2,6 +2,11 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
+		<!-- Metadata to Edit -->
+		<title>Systematic Review - Document Screening and Other Steps</title>
+		<meta name="author" content="Anna Kennedy">
+		<!-- /Metadata to edit -->
+		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<title>reveal.js</title>
@@ -16,13 +21,17 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-markdown="slides.md"
-					 data-separator="^^\r?\n---\r?\n$"
-					 data-separator-vertical="^\r?\n------\r?\n$"
-					 data-separator-notes="^Note:"
-					 data-charset="iso-8859-15"
-					 data-transition="slide">
+				<!-- Title Slide -->
+				<section>
+					<h1>Systematic Review - Document Screening and Other Steps</h1>
+					<p>
+						<small>Seyram A. Butame</small>
+						<p>
+							<smaller> DPH, Division of Chronic Disease and Injury Prevention</smaller>
+						</p>
+					</p>
 				</section>
+
 			</div>
 		</div>
 
@@ -40,11 +49,14 @@
 				margin: 0.04,
 				minScale: 0.2,
 				maxScale: 2.0,
+				history: true,
 				hash: true,
 				slideNumber: true,
 				progress: true,
 				help: true,
 
+				theme: Reveal.getQueryHash().theme,
+				transition: Reveal.getQueryHash().transition || 'default',
 
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
