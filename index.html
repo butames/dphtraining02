@@ -12,13 +12,23 @@
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/sky.css">
+		<link rel="stylesheet" href="dist/theme/skycustom.css">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
 
+		<!-- Theme used for syntax highlighted code -->
+
 	</head>
 	<body>
+
+		<div class='reveal'>
+			<div class='footer'>
+
+				<img src="img/dph_logo.png" width="35%">
+		</div>
+
+
 		<div class="reveal">
 
 			<!-- Selection elements inside this "reveal" container are showns as slides -->
@@ -57,12 +67,19 @@
 
 				<!-- Slide #3 - Stage of Systematic Review -->
 
-				<section>
-
-					<h3> Project Stage</h3>
-					
-
+				<section data-markdown data-separator="---">
+					<script type="text/template">
+							## Project Stage
+							Slide 1
+							---
+							## Demo 1
+							Slide 2
+							---
+							## Demo 1
+							Slide 3
+					</script>
 				</section>
+					
 
 				<!-- Slide #4 - Include/ Exclude -->
 
@@ -98,7 +115,11 @@
 
 				<section>
 
+					<h3>Doing two-column (this headline still full-width)</h3>
+		
 				</section>
+
+
 
 				<!-- Slide #9 - Study Types -->
 
@@ -157,19 +178,11 @@
 				<section data-markdown>
 					
 					<script type="text/template">
-						## Slide 1
+						## Slide Test
 						
-						A paragraph with some text and a [link](https://hakim.se).
+						<img src="img/training_iconthanks.svg" width="25%">
 
-						## Slide 2
-						### Slide 3
 
-						- lkjdljkkld
-						- lkjlkdj 
-						- ljlkj
-							- lkdjlkfj
-							- lkjlkdjld
-							
 
 					</script>
 
@@ -213,22 +226,14 @@
 			// - https://revealjs.com/initialization/
 			// - https://revealjs.com/config/
 			Reveal.initialize({
-				width: 960,
-				height: 700,
-				margin: 0.04,
-				minScale: 0.2,
-				maxScale: 2.0,
-				history: true,
 				hash: true,
-				slideNumber: true,
+				slideNumber: false,
 				progress: true,
-				help: true,
 				transition: 'convex', // none/fade/slide/convex/concave/zoom
 
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
 		</script>
-
 	</body>
 </html>
