@@ -370,12 +370,16 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 
 /*********************************************
  * FOOTER AT BOTTOM [LOGO]
+ A note about centering. Width of RevealJS presnetation is 960.
+ Margins take up 4% of that value on either side.
+ Space actually used for presentation contents is 960-(8% of 960)
+ Therefore to center a footer you are look at the middle of 883.3 (or 50%)
  *********************************************/
 
 .reveal .footer {
   position: absolute;
-  bottom: 0.75em;
-  left: 5em;
+  left: 42.5%; 
+	bottom: 8px;
   font-size: 0.5em;
   display: flex;
 }
